@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Calculator</title>
+<link rel="icon" type="image/png" href="favicon.png"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js"></script>
+<style>
+input {
+font-size:25;
+}
+</style>
+</head>
+<body style="background-color:rgb(92, 214, 92);">
+<h1 style="text-align:center;font-size:70;text-decoration:underline;">Calculator</h1>
+<input type="text" id="input">
+<input type="button" value="=" onclick="calculate()">
+<input type="button" value="⇤" onclick="del()">
+<input type="button" value="CLR" onclick="clr()">
+<br>
+<input type="button" value="1" onclick="display('1')">
+<input type="button" value="2" onclick="display('2')">
+<input type="button" value="3" onclick="display('3')">
+<input style="width:30px;"type="button" value="/" onclick="display('/')">
+<br>
+<input type="button" value="4" onclick="display('4')">
+<input type="button" value="5" onclick="display('5')">
+<input type="button" value="6" onclick="display('6')">
+<input style="text-align:center;width:30px;"type="button" value="*" onclick="display('*')">
+<br>
+<input type="button" value="7" onclick="display('7')">
+<input type="button" value="8" onclick="display('8')">
+<input type="button" value="9" onclick="display('9')">
+<input style="width:30px;text-align:center;"type="button" value="+" onclick="display('+')">
+<br>
+<input style="width:95px;" type="button" value="0" onclick="display('0')">
+<input style="width:30px;text-align:center;"type="button" value="-" onclick="display('-')">
+<p style="position: fixed;bottom:0;width:100%;"><b>Credit to CEO of Johnny Airlines (johnny-airlines.co.uk) for loads of help!</b></p>
+   
+
+
+<p style="font-size:20;position: fixed;bottom:0;width:100%;text-align:center;">© 2023 Kacper Z  All Rights Reserved </p>
+<script>
+function display(num) {
+document.getElementById("input").value += num;
+}
+function calculate() {
+document.getElementById("input").value=math.eval(document.getElementById("input").value);
+}
+function del() {
+str=document.getElementById("input").value;
+document.getElementById("input").value=str.slice(0,-1);
+}
+function clr() {
+document.getElementById("input").value="";
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>
